@@ -1,0 +1,37 @@
+﻿<UserControl
+    x:Class="FaceExpressionChallenge.EmotionStat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FaceExpressionChallenge"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="200">
+    
+    <Grid Margin="-50, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <ProgressBar x:Name="emotionValue" Width="300" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="LightGreen" Value="10" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <CompositeTransform Rotation="270"/>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+
+        <TextBlock x:Name="emotionKey" Text="Anger" Foreground="GhostWhite" FontSize="26" Margin="0, 0, 8, 0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="270"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <TextBlock x:Name="percentTxt" Grid.Row="1" HorizontalAlignment="Center" Padding="20" Text="10%" FontSize="24" Foreground="GhostWhite"/>
+
+        <Viewbox Grid.Row="1" VerticalAlignment="Bottom" Margin="50, 0">
+            <FontIcon  x:Name="emojiIcon" Grid.Row="1" Glyph="😠" FontFamily="Segoe UI"/>
+        </Viewbox>
+
+    </Grid>
+</UserControl>
